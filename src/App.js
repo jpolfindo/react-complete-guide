@@ -18,6 +18,7 @@ const App = () => {
 
   return (
     <div>
+      <h2>Expenses App</h2>
       <Expenses expense={expense}/>
     </div>
   );
