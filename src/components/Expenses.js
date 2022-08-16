@@ -17,12 +17,11 @@ const Expenses = (props) => {
 
   return (
     <div>
-      <Card className="expenses">
+      <Card className="container max-w-6xl mx-auto bg-gray-200 rounded-lg shadow border p-8 m-8">
         <ExpensesFilter
           selected={selectedYear}
           onChangeYear={yearFilterHandler}
         />
-
         <ExpensesList filteredExpenses={filteredExpenses} />
       </Card>
     </div>

@@ -11,7 +11,7 @@ const ExpenseItem = (props) => {
         <ExpenseDate date={props.date} />
         <div className="expense-item__description">
           <h2>{props.title}</h2>
-          <div className="expense-item__price">₱ {props.amount}</div>
+          <div className="bg-blue-500 text-white font-bold py-2 px-8 rounded mx-4">₱ {props.amount}</div>
         </div>
       </Card>
     </li>

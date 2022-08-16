@@ -24,15 +24,10 @@ const NewExpense = (props) => {
     setShowForm(true);
   }
 
-  if (showForm === false) {
-    return <div className="container mx-auto bg-gray-100 rounded-xl shadow border p-8 m-10">
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={triggerForm}>Add New Expense</button>
-    </div>
-  }
-
   return (
-    <div className="container mx-auto bg-gray-100 rounded-xl shadow border p-8 m-10">
-      <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} onCancelExpenseData={cancelExpenseDataHandler} />
+    <div className="container max-w-6xl mx-auto bg-gray-100 rounded-xl shadow border p-8 m-10">
+      {!showForm && <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={triggerForm}>Add New Expense</button>}
+      {showForm && <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} onCancelExpenseData={cancelExpenseDataHandler} />}
     </div>
   );
 };

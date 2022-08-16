@@ -83,7 +83,6 @@ const ExpenseForm = (props) => {
         <div className="new-expense__control">
           <label>Title</label>
           <input
-          className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
             type="text"
             value={enteredTitle}
             onChange={titleChangeHandler}
@@ -111,8 +110,8 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className="new-expense__actions">
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={cancelExpenseHandler}>Cancel</button>
-        <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add Expense</button>
+        <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mx-1" onClick={cancelExpenseHandler}>Cancel</button>
+        <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-1">Add Expense</button>
       </div>
     </form>
   );
